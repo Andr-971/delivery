@@ -1,0 +1,141 @@
+
+.main {
+    margin-top: calc($heightHeader);
+}
+.title__h1 {
+    font-size: apx(36, 24);
+    text-align: center;
+}
+.title__h2 {
+    font-size: apx(26, 14);
+    padding: 10px 0px;
+}
+.title__h3 {
+    font-size: apx(22, 12);
+    padding: 5px 0px;
+}
+.select-block {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    position: relative;
+}
+.delivery-block {
+    margin-top: 20px;
+}
+.delivery-btn {
+    height: 100%;
+    background: DodgerBlue;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    &:hover {
+        background: #0069d9;
+    }
+}
+.table-holder {
+    width: 80%;
+    margin: 0px auto;
+    @include md-block() {
+        width: 100%;
+        margin: 0px;
+    }
+}
+.table { // table
+    width: 100%;
+    border: 0px; 
+    border-collapse: collapse;
+}
+.table__header { // thead
+    font-weight: bold;
+    @include sm-block() {
+        display: none;
+    }
+}
+.table__header_box { // tr
+    @include sm-block() {
+        display: block;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #e8e9eb;
+    }
+}
+.table__title { // th
+    font-weight: bold;
+	background: SlateGrey;
+    color: #fff;
+	border: 1px solid #dddddd;
+    padding: 0.6rem 1rem;
+    text-transform: uppercase;
+}
+.table__body_string {
+    &:nth-child(even){
+        background-color: #e8e8e8
+    }
+}
+.table__item { // td
+    border: 1px solid #dddddd;
+    padding: 0.6rem 1rem; 
+    border-bottom: 1px solid #e8e9eb;
+    &:last-child {
+        background-color: DodgerBlue;
+        a {
+            color: #fff;
+        }
+    }
+    &:last-child:hover {
+        background: #0069d9;
+    }
+    @include sm-block() {
+        display: block;
+        text-align: right;
+        &::before {
+            content: attr(aria-label);
+            float: left;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}
+.slateGrey {
+    background-color: SlateGrey;
+}
+.text-white {
+    color: #fff;
+}
+.white {
+    background-color: #fff;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.pagination__btn {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #dddddd;
+    padding: 10px 15px;
+    &:hover {
+        background: #0069d9;
+        color: #fff;
+    }
+    &:hover a {
+        background: #0069d9;
+        color: #fff;
+    }
+}
+.pagination__link {
+    &:not(:last-child) {
+        margin-right: 5px;
+    }
+    &:hover {
+        background: #0069d9;
+        color: #fff;
+    }
+}
+
+

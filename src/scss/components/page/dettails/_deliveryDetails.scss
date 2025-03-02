@@ -1,0 +1,35 @@
+
+.delivery-card {
+    width: 80%;
+    margin: 5px auto;
+    @include md-block() {
+        width: 100%;
+    }
+}
+.delivery__section {
+    padding: 10px;
+    border: 1px solid #e8e9eb;
+    margin-bottom: 10px;
+    @include sm-block() {
+        margin-bottom: 0px;
+    }
+}
+.delivery__holder {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    &:not(:last-child) {
+        border-bottom: 1px solid #e8e9eb;
+    }
+}
+.delivery__name {
+    width: 50%;
+    padding: 5px 0px;
+}
+.delivery__result {
+    width: 50%;
+    text-align: start;
+    padding: 5px 0px;
+}
+// .basic-information {}

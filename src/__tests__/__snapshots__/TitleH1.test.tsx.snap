@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleH1 Component matches snapshot 1`] = `
+<DocumentFragment>
+  <h1
+    class="title__h1"
+    data-testid="title-h1"
+  >
+    Test Heading
+  </h1>
+</DocumentFragment>
+`;
