@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export async function generateStaticParams() {
     return mockData.map((el: Delivery) => {
-        return el.entity;
+        return el.entity.uuid;
     });
 }
 
