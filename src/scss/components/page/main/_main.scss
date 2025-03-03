@@ -5,6 +5,9 @@
 .title__h1 {
     font-size: apx(36, 24);
     text-align: center;
+    @include sm-block() {
+        margin-top: 10px;
+    }
 }
 .title__h2 {
     font-size: apx(26, 14);

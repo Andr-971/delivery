@@ -3,9 +3,6 @@ import type { Metadata } from "next";
 import { fetchDeliveryDetails } from "../../../api/deliveries";
 import Link from "next/link";
 import TitleH1 from "../../../components/TitleH1/TitleH1";
-import {fetchDeliveries} from "../../../api/deliveries"
-import mockData from "../../../../mockData"
-import {Delivery} from "../../../types/delivery"
 
 export const metadata: Metadata = {
     title: "Подробно о доставке",
