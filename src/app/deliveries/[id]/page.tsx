@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { fetchDeliveryDetails } from "../../../api/deliveries";
 import Link from "next/link";
 import TitleH1 from "../../../components/TitleH1/TitleH1";
+import {fetchDeliveries} from "../../../api/deliveries"
 import mockData from "../../../../mockData"
 import {Delivery} from "../../../types/delivery"
 
@@ -12,9 +13,11 @@ export const metadata: Metadata = {
 };
 
 export async function generateStaticParams() {
-    return mockData.map((el: Delivery) => {
-        return el.entity.uuid;
-    });
+    const { deliveries } = await fetchDeliveries();
+
+    return deliveries.map((delivery) => ({
+        id: delivery.entity.uuid.toString(),
+    }));
 }
 
 export default async function DeliveryDetails({
