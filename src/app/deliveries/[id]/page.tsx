@@ -12,14 +12,6 @@ export const metadata: Metadata = {
     description: "Подробно о доставке",
 };
 
-export async function generateStaticParams() {
-    const { deliveries } = await fetchDeliveries();
-
-    return deliveries.map((delivery) => ({
-        id: delivery.entity.uuid.toString(),
-    }));
-}
-
 export default async function DeliveryDetails({
     params,
 }: {
