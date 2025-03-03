@@ -3,17 +3,25 @@ import type { Metadata } from "next";
 import { fetchDeliveryDetails } from "../../../api/deliveries";
 import Link from "next/link";
 import TitleH1 from "../../../components/TitleH1/TitleH1";
+import mockData from "../../../../mockData"
+import {Delivery} from "../../../types/delivery"
 
 export const metadata: Metadata = {
     title: "Подробно о доставке",
     description: "Подробно о доставке",
 };
 
+export async function generateStaticParams() {
+    return mockData.map((el: Delivery) => {
+        return el.entity;
+    });
+}
+
 export default async function DeliveryDetails({
     params,
 }: {
     params: { id: string };
-}) {
+    }) {
     const delivery = await fetchDeliveryDetails(params.id);
     return (
         <div className="g-container">
